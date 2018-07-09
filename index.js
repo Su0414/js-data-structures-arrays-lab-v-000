@@ -20,7 +20,8 @@ function destructivelyRemoveFirstDriver(name){
 
 
 function appendDriver(name){
-  var copyDrivers = drivers.splice(3, 0, name);
+  drivers.splice(3, 0, name);
+  var copyDrivers = drivers
   return copyDrivers;
 }
 
