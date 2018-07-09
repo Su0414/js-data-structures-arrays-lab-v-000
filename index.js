@@ -26,13 +26,17 @@ function appendDriver(name){
 }
 
 function prependDriver(name){
-  drivers.splice(0,name);
+  var copyDrivers = drivers.slice();
+  copyDrivers.unshift(name);
+  return copyDrivers;
 }
 
 function removeLastDriver(name){
-  drivers.splice(-1,name);
-}
+  var copyDrivers = drivers.slice();
+  copyDrivers.pop(name);
+  return copyDrivers;}
 
 function removeFirstDriver(name){
-  drivers.splice(0,name);
-}
+  var copyDrivers = drivers.slice();
+  copyDrivers.shift(name);
+  return copyDrivers;}
